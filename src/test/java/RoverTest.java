@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class RoverTest {
     @Test
@@ -10,5 +11,10 @@ public class RoverTest {
         Rover rover = new Rover(startingPoint);
 
         assertEquals(new Rover(startingPoint), rover);
+    }
+
+    @Test
+    public void a_rover_has_a_direction() {
+        assertTrue(false);
     }
 }

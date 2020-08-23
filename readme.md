@@ -27,9 +27,9 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
-
 - [F] A rover start with the direction it is facing (N,S,E,W).
+
+- [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
 
 - [F] A rover can be moved forward when it receives the command `f`.
 
