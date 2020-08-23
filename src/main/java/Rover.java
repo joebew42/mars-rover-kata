@@ -1,12 +1,10 @@
 import java.util.Objects;
 
 public class Rover {
-    private final int x;
-    private final int y;
+    private Point point;
 
-    public Rover(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Rover(Point point) {
+        this.point = point;
     }
 
     @Override
@@ -14,12 +12,11 @@ public class Rover {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rover rover = (Rover) o;
-        return x == rover.x &&
-                y == rover.y;
+        return Objects.equals(point, rover.point);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(x, y);
+        return Objects.hash(point);
     }
 }

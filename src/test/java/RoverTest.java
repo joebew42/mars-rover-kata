@@ -5,11 +5,10 @@ import static org.junit.Assert.assertEquals;
 public class RoverTest {
     @Test
     public void a_rover_has_a_starting_point() {
-        int x = 1;
-        int y = 1;
+        Point startingPoint = new Point(1, 1);
 
-        Rover rover = new Rover(x, y);
+        Rover rover = new Rover(startingPoint);
 
-        assertEquals(new Rover(x,y), rover);
+        assertEquals(new Rover(startingPoint), rover);
     }
 }
