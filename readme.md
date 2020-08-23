@@ -27,7 +27,9 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [F] A rover start with a starting point (x,y) and the direction it is facing (N,S,E,W).
+- [F] A rover start with a starting point (x,y)
+
+- [F] A rover start with the direction it is facing (N,S,E,W).
 
 - [F] A rover can be moved forward when it receives the command `f`.
 
