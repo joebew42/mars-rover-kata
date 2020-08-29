@@ -9,22 +9,6 @@ import static org.kata.Rover.Direction.South;
 
 public class RoverTest {
     @Test
-    public void a_rover_has_a_starting_point() {
-        Point startingPoint = new Point(1, 1);
-
-        Rover rover = new Rover(startingPoint);
-
-        assertEquals(new Rover(startingPoint), rover);
-    }
-
-    @Test
-    public void a_rover_has_a_direction() {
-        Rover rover = new Rover(North);
-
-        assertEquals(new Rover(North), rover);
-    }
-
-    @Test
     public void a_rover_has_an_initial_position_and_a_facing_direction() {
         Rover rover = new Rover(new Point(1, 1), North);
 

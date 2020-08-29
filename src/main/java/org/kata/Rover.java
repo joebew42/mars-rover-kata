@@ -3,16 +3,8 @@ package org.kata;
 import java.util.Objects;
 
 public class Rover {
-    private Point point;
-    private Direction direction;
-
-    public Rover(Point point) {
-        this.point = point;
-    }
-
-    public Rover(Direction direction) {
-        this.direction = direction;
-    }
+    private final Point point;
+    private final Direction direction;
 
     public Rover(Point point, Direction direction) {
         this.point = point;
