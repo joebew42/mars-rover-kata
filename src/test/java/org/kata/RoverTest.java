@@ -12,4 +12,13 @@ public class RoverTest {
 
         assertEquals(new Rover(new Point(1, 1), North), rover);
     }
+
+    @Test
+    public void a_rover_can_be_moved_forward_when_it_receives_the_command_f() {
+        Rover rover = new Rover(new Point(0, 0), North);
+
+        rover.execute('f');
+
+        assertEquals(new Rover(new Point(0, 1), North), rover);
+    }
 }

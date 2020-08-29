@@ -11,6 +11,10 @@ public class Rover {
         this.direction = direction;
     }
 
+    public void execute(char command) {
+        throw new RuntimeException("Not yet implemented");
+    }
+
     public enum Direction {
         North,
         South;

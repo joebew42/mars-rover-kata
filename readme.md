@@ -27,11 +27,15 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [F] WIP: A rover can be moved forward when it receives the command `f`.
+    
+    - The `x`, and `y` should changes based on the facing direction.
+      E.g. When the rover is facing North and moves forward, the `y` should increment by one.
+      E.g. When the rover is facing East and moves forward, the `x` should increment by one.
+
 - [F] Direction `West` and `East` are missing.
 
 - [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
-
-- [F] A rover can be moved forward when it receives the command `f`.
 
 - [F] A rover can be moved backward when it receives the command `b`.
 
