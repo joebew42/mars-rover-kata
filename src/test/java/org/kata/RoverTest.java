@@ -3,9 +3,7 @@ package org.kata;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.kata.Rover.Direction.North;
-import static org.kata.Rover.Direction.South;
 
 public class RoverTest {
     @Test
@@ -22,12 +20,5 @@ public class RoverTest {
         Rover rover = new Rover(North);
 
         assertEquals(new Rover(North), rover);
-    }
-
-    @Test
-    public void two_rovers_with_different_directions_are_not_equals() {
-        Rover rover = new Rover(South);
-
-        assertNotEquals(new Rover(North), rover);
     }
 }
