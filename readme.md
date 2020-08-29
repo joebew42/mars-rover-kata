@@ -27,6 +27,8 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [F] Direction `West` and `East` are missing.
+
 - [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
 
 - [F] A rover can be moved forward when it receives the command `f`.
