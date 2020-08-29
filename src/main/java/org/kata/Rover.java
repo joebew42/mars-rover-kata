@@ -1,3 +1,5 @@
+package org.kata;
+
 import java.util.Objects;
 
 public class Rover {
