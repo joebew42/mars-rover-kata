@@ -14,6 +14,11 @@ public class Rover {
         this.direction = direction;
     }
 
+    public Rover(Point point, Direction direction) {
+        this.point = point;
+        this.direction = direction;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
