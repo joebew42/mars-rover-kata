@@ -11,6 +11,11 @@ public class Rover {
         this.direction = direction;
     }
 
+    public enum Direction {
+        North,
+        South;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -23,10 +28,5 @@ public class Rover {
     @Override
     public int hashCode() {
         return Objects.hash(point, direction);
-    }
-
-    public enum Direction {
-        North,
-        South;
     }
 }
