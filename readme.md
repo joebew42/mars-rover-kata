@@ -27,8 +27,6 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Write the Direction in uppercase since they are constants.
-
 - [R] Use `.equals` instead of `direction == North`,
       or probably use a more descriptive method? For example `isFacingNorth`
 

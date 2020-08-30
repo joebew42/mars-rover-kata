@@ -14,28 +14,28 @@ public class Rover {
     }
 
     public void execute(char command) {
-        if (direction == North) {
+        if (direction == NORTH) {
             point.increaseY();
         }
 
-        if (direction == South) {
+        if (direction == SOUTH) {
             point.decreaseY();
         }
 
-        if (direction == East) {
+        if (direction == EAST) {
             point.increaseX();
         }
 
-        if (direction == West) {
+        if (direction == WEST) {
             point.decreaseX();
         }
     }
 
     public enum Direction {
-        North,
-        South,
-        East,
-        West;
+        NORTH,
+        SOUTH,
+        EAST,
+        WEST;
     }
 
     @Override
