@@ -5,6 +5,13 @@ import java.util.Objects;
 import static org.kata.Rover.Direction.*;
 
 public class Rover {
+    public enum Direction {
+        NORTH,
+        SOUTH,
+        EAST,
+        WEST;
+    }
+
     private final Point point;
     private final Direction direction;
 
@@ -14,28 +21,37 @@ public class Rover {
     }
 
     public void execute(char command) {
-        if (direction == NORTH) {
+        if (isFacingNorth()) {
             point.increaseY();
         }
 
-        if (direction == SOUTH) {
+        if (isFacingSouth()) {
             point.decreaseY();
         }
 
-        if (direction == EAST) {
+        if (isFacingEast()) {
             point.increaseX();
         }
 
-        if (direction == WEST) {
+        if (isFacingWest()) {
             point.decreaseX();
         }
     }
 
-    public enum Direction {
-        NORTH,
-        SOUTH,
-        EAST,
-        WEST;
+    private boolean isFacingNorth() {
+        return NORTH.equals(direction);
+    }
+
+    private boolean isFacingSouth() {
+        return SOUTH.equals(direction);
+    }
+
+    private boolean isFacingEast() {
+        return EAST.equals(direction);
+    }
+
+    private boolean isFacingWest() {
+        return WEST.equals(direction);
     }
 
     @Override
