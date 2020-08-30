@@ -12,7 +12,7 @@ public class Rover {
     }
 
     public void execute(char command) {
-        throw new RuntimeException("Not yet implemented");
+        point.increaseY();
     }
 
     public enum Direction {

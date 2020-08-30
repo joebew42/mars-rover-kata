@@ -14,7 +14,7 @@ public class RoverTest {
     }
 
     @Test
-    public void a_rover_can_be_moved_forward_when_it_receives_the_command_f() {
+    public void a_rover_moves_forward_along_the_y_when_it_receives_the_command_f_and_it_is_facing_north() {
         Rover rover = new Rover(new Point(0, 0), North);
 
         rover.execute('f');

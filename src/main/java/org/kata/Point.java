@@ -4,11 +4,15 @@ import java.util.Objects;
 
 public class Point {
     private final int x;
-    private final int y;
+    private int y;
 
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    public void increaseY() {
+        this.y++;
     }
 
     @Override
