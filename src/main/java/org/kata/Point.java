@@ -15,6 +15,10 @@ public class Point {
         this.y++;
     }
 
+    public void decreaseY() {
+        this.y--;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

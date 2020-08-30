@@ -2,6 +2,9 @@ package org.kata;
 
 import java.util.Objects;
 
+import static org.kata.Rover.Direction.North;
+import static org.kata.Rover.Direction.South;
+
 public class Rover {
     private final Point point;
     private final Direction direction;
@@ -12,7 +15,13 @@ public class Rover {
     }
 
     public void execute(char command) {
-        point.increaseY();
+        if (direction == North) {
+            point.increaseY();
+        }
+
+        if (direction == South) {
+            point.decreaseY();
+        }
     }
 
     public enum Direction {

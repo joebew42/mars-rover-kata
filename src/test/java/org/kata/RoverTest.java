@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.kata.Rover.Direction.North;
+import static org.kata.Rover.Direction.South;
 
 public class RoverTest {
     @Test
@@ -20,5 +21,14 @@ public class RoverTest {
         rover.execute('f');
 
         assertEquals(new Rover(new Point(0, 1), North), rover);
+    }
+
+    @Test
+    public void moves_backward_along_the_y_when_it_receives_the_command_f_and_it_is_facing_south() {
+        Rover rover = new Rover(new Point(0, 0), South);
+
+        rover.execute('f');
+
+        assertEquals(new Rover(new Point(0, -1), South), rover);
     }
 }
