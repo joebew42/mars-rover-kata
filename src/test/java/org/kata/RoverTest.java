@@ -7,14 +7,14 @@ import static org.kata.Rover.Direction.North;
 
 public class RoverTest {
     @Test
-    public void a_rover_has_an_initial_position_and_a_facing_direction() {
+    public void has_an_initial_position_and_a_facing_direction() {
         Rover rover = new Rover(new Point(1, 1), North);
 
         assertEquals(new Rover(new Point(1, 1), North), rover);
     }
 
     @Test
-    public void a_rover_moves_forward_along_the_y_when_it_receives_the_command_f_and_it_is_facing_north() {
+    public void moves_forward_along_the_y_when_it_receives_the_command_f_and_it_is_facing_north() {
         Rover rover = new Rover(new Point(0, 0), North);
 
         rover.execute('f');
