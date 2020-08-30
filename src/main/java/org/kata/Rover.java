@@ -22,20 +22,36 @@ public class Rover {
 
     public void execute(char command) {
         if (isFacingNorth()) {
-            point.increaseY();
+            moveNorth();
         }
 
         if (isFacingSouth()) {
-            point.decreaseY();
+            moveSouth();
         }
 
         if (isFacingEast()) {
-            point.increaseX();
+            moveEast();
         }
 
         if (isFacingWest()) {
-            point.decreaseX();
+            moveWest();
         }
+    }
+
+    private void moveWest() {
+        point.decreaseX();
+    }
+
+    private void moveEast() {
+        point.increaseX();
+    }
+
+    private void moveSouth() {
+        point.decreaseY();
+    }
+
+    private void moveNorth() {
+        point.increaseY();
     }
 
     private boolean isFacingNorth() {

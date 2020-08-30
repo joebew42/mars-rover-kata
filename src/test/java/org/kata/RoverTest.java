@@ -14,7 +14,7 @@ public class RoverTest {
     }
 
     @Test
-    public void moves_forward_along_the_y_when_it_receives_the_command_f_and_it_is_facing_north() {
+    public void moves_north_when_it_receives_the_command_f_and_it_is_facing_north() {
         Rover rover = new Rover(new Point(0, 0), NORTH);
 
         rover.execute('f');
@@ -23,7 +23,7 @@ public class RoverTest {
     }
 
     @Test
-    public void moves_backward_along_the_y_when_it_receives_the_command_f_and_it_is_facing_south() {
+    public void moves_south_when_it_receives_the_command_f_and_it_is_facing_south() {
         Rover rover = new Rover(new Point(0, 0), SOUTH);
 
         rover.execute('f');
@@ -32,7 +32,7 @@ public class RoverTest {
     }
 
     @Test
-    public void moves_forward_along_the_x_when_it_receives_the_command_f_and_it_is_facing_east() {
+    public void moves_east_when_it_receives_the_command_f_and_it_is_facing_east() {
         Rover rover = new Rover(new Point(0, 0), EAST);
 
         rover.execute('f');
@@ -41,7 +41,7 @@ public class RoverTest {
     }
 
     @Test
-    public void moves_backward_along_the_x_when_it_receives_the_command_f_and_it_is_facing_west() {
+    public void moves_west_when_it_receives_the_command_f_and_it_is_facing_west() {
         Rover rover = new Rover(new Point(0, 0), WEST);
 
         rover.execute('f');
