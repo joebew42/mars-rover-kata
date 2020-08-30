@@ -39,4 +39,13 @@ public class RoverTest {
 
         assertEquals(new Rover(new Point(1, 0), East), rover);
     }
+
+    @Test
+    public void moves_backward_along_the_x_when_it_receives_the_command_f_and_it_is_facing_west() {
+        Rover rover = new Rover(new Point(0, 0), West);
+
+        rover.execute('f');
+
+        assertEquals(new Rover(new Point(-1, 0), West), rover);
+    }
 }

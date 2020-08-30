@@ -23,6 +23,10 @@ public class Point {
         this.x++;
     }
 
+    public void decreaseX() {
+        this.x--;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

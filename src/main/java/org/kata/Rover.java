@@ -25,12 +25,17 @@ public class Rover {
         if (direction == East) {
             point.increaseX();
         }
+
+        if (direction == West) {
+            point.decreaseX();
+        }
     }
 
     public enum Direction {
         North,
         South,
-        East;
+        East,
+        West;
     }
 
     @Override
