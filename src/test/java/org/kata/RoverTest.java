@@ -3,8 +3,7 @@ package org.kata;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.kata.Rover.Direction.North;
-import static org.kata.Rover.Direction.South;
+import static org.kata.Rover.Direction.*;
 
 public class RoverTest {
     @Test
@@ -30,5 +29,14 @@ public class RoverTest {
         rover.execute('f');
 
         assertEquals(new Rover(new Point(0, -1), South), rover);
+    }
+
+    @Test
+    public void moves_forward_along_the_x_when_it_receives_the_command_f_and_it_is_facing_east() {
+        Rover rover = new Rover(new Point(0, 0), East);
+
+        rover.execute('f');
+
+        assertEquals(new Rover(new Point(1, 0), East), rover);
     }
 }

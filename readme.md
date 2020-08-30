@@ -28,8 +28,7 @@ Develop an API that translates the commands sent from earth to instructions that
 ## TODO
 
 - [F] WIP: A rover can be moved forward when it receives the command `f`.
-    
-    - moves forward along the x when it receives the command f and it is facing east
+
     - moves backward along the x when it receives the command f and it is facing west
 
 - [F] Direction `West` and `East` are missing.

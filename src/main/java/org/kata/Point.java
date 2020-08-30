@@ -3,7 +3,7 @@ package org.kata;
 import java.util.Objects;
 
 public class Point {
-    private final int x;
+    private int x;
     private int y;
 
     public Point(int x, int y) {
@@ -17,6 +17,10 @@ public class Point {
 
     public void decreaseY() {
         this.y--;
+    }
+
+    public void increaseX() {
+        this.x++;
     }
 
     @Override

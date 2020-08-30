@@ -2,8 +2,7 @@ package org.kata;
 
 import java.util.Objects;
 
-import static org.kata.Rover.Direction.North;
-import static org.kata.Rover.Direction.South;
+import static org.kata.Rover.Direction.*;
 
 public class Rover {
     private final Point point;
@@ -22,11 +21,16 @@ public class Rover {
         if (direction == South) {
             point.decreaseY();
         }
+
+        if (direction == East) {
+            point.increaseX();
+        }
     }
 
     public enum Direction {
         North,
-        South;
+        South,
+        East;
     }
 
     @Override
