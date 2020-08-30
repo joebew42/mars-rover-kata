@@ -33,4 +33,9 @@ public class Rover {
     public int hashCode() {
         return Objects.hash(point, direction);
     }
+
+    @Override
+    public String toString() {
+        return "Rover{point=" + point + ", direction=" + direction + '}';
+    }
 }
