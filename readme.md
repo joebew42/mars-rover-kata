@@ -27,11 +27,10 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [F] WIP: A rover can be moved forward when it receives the command `f`.
+- [R] Write the Direction in uppercase since they are constants.
 
-    - moves backward along the x when it receives the command f and it is facing west
-
-- [F] Direction `West` and `East` are missing.
+- [R] Use `.equals` instead of `direction == North`,
+      or probably use a more descriptive method? For example `isFacingNorth`
 
 - [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
 
