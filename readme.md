@@ -27,8 +27,6 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Make the conditional about the 'f' command explicit. Do not use an else clause.
-
 - [F] A rover can be moved backward when it receives the command `b`.
 
     - moves north when it receives the command b and it is facing south
