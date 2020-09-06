@@ -21,20 +21,26 @@ public class Rover {
     }
 
     public void execute(char command) {
-        if (isFacingNorth()) {
-            moveNorth();
-        }
+        if (command == 'b') {
+            if (isFacingNorth()) {
+                moveSouth();
+            }
+        } else {
+            if (isFacingNorth()) {
+                moveNorth();
+            }
 
-        if (isFacingSouth()) {
-            moveSouth();
-        }
+            if (isFacingSouth()) {
+                moveSouth();
+            }
 
-        if (isFacingEast()) {
-            moveEast();
-        }
+            if (isFacingEast()) {
+                moveEast();
+            }
 
-        if (isFacingWest()) {
-            moveWest();
+            if (isFacingWest()) {
+                moveWest();
+            }
         }
     }
 

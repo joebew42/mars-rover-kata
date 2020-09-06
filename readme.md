@@ -27,10 +27,16 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
-      Is there a chance to extract a DSL to assert that the rover just moved along a direction?
+- [R] Make the conditional about the 'f' command explicit. Do not use an else clause.
 
 - [F] A rover can be moved backward when it receives the command `b`.
+
+    - moves north when it receives the command b and it is facing south
+    - moves west  when it receives the command b and it is facing east
+    - moves east  when it receives the command b and it is facing west
+
+- [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
+      Is there a chance to extract a DSL to assert that the rover just moved along a direction?
 
 - [F] A rover can rotate left with it received the command `l`.
 
