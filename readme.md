@@ -27,10 +27,10 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
+
 - [R] Is there a better way to express `assertEquals(new Rover(new Point(-1, 0), WEST), rover);` in the test?
       Is there a chance to extract a DSL to assert that the rover just moved along a direction?
-
-- [R] `Point` seems to be too generic. Is there a better name we can use? `Position`, or `Location`?
 
 - [F] A rover can be moved backward when it receives the command `b`.
 
