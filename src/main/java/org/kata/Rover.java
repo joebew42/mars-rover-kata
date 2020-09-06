@@ -21,13 +21,13 @@ public class Rover {
     }
 
     public void execute(char command) {
-        if ('b' == command) {
+        if (isBackwardCommand(command)) {
             if (isFacingNorth()) {
                 moveSouth();
             }
         }
 
-        if ('f' == command) {
+        if (isForwardCommand(command)) {
             if (isFacingNorth()) {
                 moveNorth();
             }
@@ -44,6 +44,14 @@ public class Rover {
                 moveWest();
             }
         }
+    }
+
+    private boolean isForwardCommand(char command) {
+        return 'f' == command;
+    }
+
+    private boolean isBackwardCommand(char command) {
+        return 'b' == command;
     }
 
     private void moveWest() {
