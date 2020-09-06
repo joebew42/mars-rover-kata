@@ -2,11 +2,11 @@ package org.kata;
 
 import java.util.Objects;
 
-public class Point {
+public class Position {
     private int x;
     private int y;
 
-    public Point(int x, int y) {
+    public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -31,9 +31,9 @@ public class Point {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Point point = (Point) o;
-        return x == point.x &&
-                y == point.y;
+        Position position = (Position) o;
+        return x == position.x &&
+                y == position.y;
     }
 
     @Override
@@ -43,6 +43,6 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{x=" + x + ", y=" + y + '}';
+        return "Position{x=" + x + ", y=" + y + '}';
     }
 }
