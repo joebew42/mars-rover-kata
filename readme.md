@@ -34,7 +34,10 @@ Develop an API that translates the commands sent from earth to instructions that
     - moves east  when it receives the command b and it is facing west
 
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
-      Is there a chance to extract a DSL to assert that the rover just moved along a direction?
+
+    - Is there a chance to extract a DSL to assert that the rover just moved along a direction?
+    - Try to use `AssertThat` with custom matchers
+    - Try to use `AssertJ`
 
 - [F] A rover can rotate left with it received the command `l`.
 
