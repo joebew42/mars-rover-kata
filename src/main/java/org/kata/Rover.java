@@ -23,22 +23,8 @@ public class Rover {
         this.direction = direction;
     }
 
-    public void execute(char command) {
-        if (isBackwardCommand(command)) {
-            backwardCommand.apply(this);
-        }
-
-        if (isForwardCommand(command)) {
-            forwardCommand.apply(this);
-        }
-    }
-
-    private boolean isForwardCommand(char command) {
-        return 'f' == command;
-    }
-
-    private boolean isBackwardCommand(char command) {
-        return 'b' == command;
+    public void execute(char commandCharacter) {
+        commandFrom(commandCharacter).apply(this);
     }
 
     public void moveWest() {
@@ -71,6 +57,25 @@ public class Rover {
 
     public boolean isFacingWest() {
         return WEST.equals(direction);
+    }
+
+    private Command commandFrom(char commandCharacter) {
+        if (isBackwardCommand(commandCharacter)) {
+            return backwardCommand;
+        }
+
+        if (isForwardCommand(commandCharacter)) {
+            return forwardCommand;
+        }
+        return null;
+    }
+
+    private boolean isForwardCommand(char command) {
+        return 'f' == command;
+    }
+
+    private boolean isBackwardCommand(char command) {
+        return 'b' == command;
     }
 
     @Override

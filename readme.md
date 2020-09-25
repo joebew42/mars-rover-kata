@@ -27,7 +27,7 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Try to remove all the conditionals in the method `execute` by extracting the `command`s
+- [R] Delegate the method `commandFrom` to another class
 
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
 
