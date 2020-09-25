@@ -5,6 +5,8 @@ import java.util.Objects;
 import static org.kata.Rover.Direction.*;
 
 public class Rover {
+    private final BackwardCommand backwardCommand = new BackwardCommand();
+
     public enum Direction {
         NORTH,
         SOUTH,
@@ -22,18 +24,7 @@ public class Rover {
 
     public void execute(char command) {
         if (isBackwardCommand(command)) {
-            if (isFacingNorth()) {
-                moveSouth();
-            }
-            if (isFacingSouth()) {
-                moveNorth();
-            }
-            if (isFacingEast()) {
-                moveWest();
-            }
-            if (isFacingWest()) {
-                moveEast();
-            }
+            backwardCommand.apply(this);
         }
 
         if (isForwardCommand(command)) {
@@ -63,35 +54,35 @@ public class Rover {
         return 'b' == command;
     }
 
-    private void moveWest() {
+    public void moveWest() {
         position.decreaseX();
     }
 
-    private void moveEast() {
+    public void moveEast() {
         position.increaseX();
     }
 
-    private void moveSouth() {
+    public void moveSouth() {
         position.decreaseY();
     }
 
-    private void moveNorth() {
+    public void moveNorth() {
         position.increaseY();
     }
 
-    private boolean isFacingNorth() {
+    public boolean isFacingNorth() {
         return NORTH.equals(direction);
     }
 
-    private boolean isFacingSouth() {
+    public boolean isFacingSouth() {
         return SOUTH.equals(direction);
     }
 
-    private boolean isFacingEast() {
+    public boolean isFacingEast() {
         return EAST.equals(direction);
     }
 
-    private boolean isFacingWest() {
+    public boolean isFacingWest() {
         return WEST.equals(direction);
     }
 

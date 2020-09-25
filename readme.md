@@ -27,13 +27,13 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [R] Try to remove all the conditionals in the method `execute` by extracting the `command`s
+
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
 
     - Is there a chance to extract a DSL to assert that the rover just moved along a direction?
     - Try to use `AssertThat` with custom matchers
     - Try to use `AssertJ`
-
-- [R] Try to remove all the conditionals in the method `execute` by extracting the `command`s
 
 - [F] The method `execute` should receive an array of commands and execute them all
 
