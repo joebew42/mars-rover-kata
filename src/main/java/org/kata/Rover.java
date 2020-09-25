@@ -6,6 +6,7 @@ import static org.kata.Rover.Direction.*;
 
 public class Rover {
     private final BackwardCommand backwardCommand = new BackwardCommand();
+    private final ForwardCommand forwardCommand = new ForwardCommand();
 
     public enum Direction {
         NORTH,
@@ -28,21 +29,7 @@ public class Rover {
         }
 
         if (isForwardCommand(command)) {
-            if (isFacingNorth()) {
-                moveNorth();
-            }
-
-            if (isFacingSouth()) {
-                moveSouth();
-            }
-
-            if (isFacingEast()) {
-                moveEast();
-            }
-
-            if (isFacingWest()) {
-                moveWest();
-            }
+            forwardCommand.apply(this);
         }
     }
 
