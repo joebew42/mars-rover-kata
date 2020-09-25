@@ -33,6 +33,10 @@ Develop an API that translates the commands sent from earth to instructions that
     - Try to use `AssertThat` with custom matchers
     - Try to use `AssertJ`
 
+- [R] Try to remove all the conditionals in the method `execute` by extracting the `command`s
+
+- [F] The method `execute` should receive an array of commands and execute them all
+
 - [F] A rover can rotate left with it received the command `l`.
 
 - [F] A rover can rotate left with it received the command `r`.
