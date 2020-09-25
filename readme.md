@@ -29,8 +29,7 @@ Develop an API that translates the commands sent from earth to instructions that
 
 - [F] A rover can be moved backward when it receives the command `b`.
 
-    - moves west  when it receives the command b and it is facing east
-    - moves east  when it receives the command b and it is facing west
+    - moves east when it receives the command b, and it is facing west
 
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
 
