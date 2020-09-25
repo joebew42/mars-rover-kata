@@ -1,7 +1,8 @@
 package org.kata;
 
-public class BackwardCommand {
-    void apply(Rover rover) {
+public class BackwardCommand implements Command {
+    @Override
+    public void apply(Rover rover) {
         if (rover.isFacingNorth()) {
             rover.moveSouth();
         }

@@ -5,8 +5,8 @@ import java.util.Objects;
 import static org.kata.Rover.Direction.*;
 
 public class Rover {
-    private final BackwardCommand backwardCommand = new BackwardCommand();
-    private final ForwardCommand forwardCommand = new ForwardCommand();
+    private final Command backwardCommand = new BackwardCommand();
+    private final Command forwardCommand = new ForwardCommand();
 
     public enum Direction {
         NORTH,
