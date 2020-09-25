@@ -57,4 +57,13 @@ public class RoverTest {
 
         assertEquals(new Rover(new Position(0, -1), NORTH), rover);
     }
+
+    @Test
+    public void moves_north_when_it_receives_the_command_b_and_it_is_facing_south() {
+        Rover rover = new Rover(new Position(0, 0), SOUTH);
+
+        rover.execute('b');
+
+        assertEquals(new Rover(new Position(0, 1), SOUTH), rover);
+    }
 }

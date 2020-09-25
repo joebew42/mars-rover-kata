@@ -29,7 +29,6 @@ Develop an API that translates the commands sent from earth to instructions that
 
 - [F] A rover can be moved backward when it receives the command `b`.
 
-    - moves north when it receives the command b and it is facing south
     - moves west  when it receives the command b and it is facing east
     - moves east  when it receives the command b and it is facing west
 
