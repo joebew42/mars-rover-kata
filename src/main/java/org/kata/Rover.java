@@ -31,6 +31,9 @@ public class Rover {
             if (isFacingEast()) {
                 moveWest();
             }
+            if (isFacingWest()) {
+                moveEast();
+            }
         }
 
         if (isForwardCommand(command)) {
