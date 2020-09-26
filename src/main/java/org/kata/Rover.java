@@ -5,8 +5,8 @@ import java.util.Objects;
 import static org.kata.Rover.Direction.*;
 
 public class Rover {
-    private final Command backwardCommand = new BackwardCommand();
-    private final Command forwardCommand = new ForwardCommand();
+
+    private final Commands commands = new Commands();
 
     public enum Direction {
         NORTH,
@@ -24,7 +24,7 @@ public class Rover {
     }
 
     public void execute(char commandCharacter) {
-        commandFrom(commandCharacter).apply(this);
+        commands.from(commandCharacter).apply(this);
     }
 
     public void moveWest() {
@@ -59,23 +59,12 @@ public class Rover {
         return WEST.equals(direction);
     }
 
-    private Command commandFrom(char commandCharacter) {
-        if (isBackwardCommand(commandCharacter)) {
-            return backwardCommand;
-        }
-
-        if (isForwardCommand(commandCharacter)) {
-            return forwardCommand;
-        }
-        return null;
-    }
-
     private boolean isForwardCommand(char command) {
-        return 'f' == command;
+        return commands.isForwardCommand(command);
     }
 
     private boolean isBackwardCommand(char command) {
-        return 'b' == command;
+        return commands.isBackwardCommand(command);
     }
 
     @Override
