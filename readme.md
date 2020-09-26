@@ -38,3 +38,13 @@ Develop an API that translates the commands sent from earth to instructions that
 - [F] A rover can rotate left with it received the command `l`.
 
 - [F] A rover can rotate left with it received the command `r`.
+
+## Questions
+
+- Could we express the `Commands` class as a `Repository` if we think in terms of Domain-Driven Design?
+    - What is the difference between `Commands.from('b')` and `Commands.findByCharacter('b')?
+      The only thing I see is that now the term 'b' becomes part of our domain, and not something we have to map
+      from the outside to our domain (e.g. 'b' is getting mapped to a `Command` that is part of the domain).
+
+- If we had to re-think at the tests of the `Rover` class, how we might have to rewrite them?
+  What does the `Rover` class is really doing? Collaborating with the `Commands`?
