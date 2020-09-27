@@ -27,6 +27,11 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [F] Implement the obstacle detection before each move to a new square.
+      If a given sequence of commands encounters an obstacle,
+      the rover moves up to the last possible position,
+      aborts the sequence and reports the obstacle.
+
 - [F] Being able to interpret a sequence of commands
 
 - [F] Implement obstacle detection before each move to a new square.
