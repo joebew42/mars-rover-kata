@@ -67,14 +67,6 @@ public class Rover {
         return WEST.equals(direction);
     }
 
-    private boolean isForwardCommand(char command) {
-        return commands.isForwardCommand(command);
-    }
-
-    private boolean isBackwardCommand(char command) {
-        return commands.isBackwardCommand(command);
-    }
-
     private void assignPosition(Position position) {
         this.position = position;
     }
