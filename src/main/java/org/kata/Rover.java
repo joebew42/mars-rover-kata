@@ -13,14 +13,22 @@ public class Rover {
         SOUTH,
         EAST,
         WEST;
+
     }
 
-    private final Position position;
+    private Position position;
+
     private final Direction direction;
+    private final Obstacles obstacles;
 
     public Rover(Position position, Direction direction) {
-        this.position = position;
+        this(position, direction, new Obstacles());
+    }
+
+    public Rover(Position position, Direction direction, Obstacles obstacles) {
+        assignPosition(position);
         this.direction = direction;
+        this.obstacles = obstacles;
     }
 
     public void execute(char commandCharacter) {
@@ -28,19 +36,19 @@ public class Rover {
     }
 
     public void moveWest() {
-        position.decreaseX();
+        assignPosition(position.decreaseX());
     }
 
     public void moveEast() {
-        position.increaseX();
+        assignPosition(position.increaseX());
     }
 
     public void moveSouth() {
-        position.decreaseY();
+        assignPosition(position.decreaseY());
     }
 
     public void moveNorth() {
-        position.increaseY();
+        assignPosition(position.increaseY());
     }
 
     public boolean isFacingNorth() {
@@ -65,6 +73,10 @@ public class Rover {
 
     private boolean isBackwardCommand(char command) {
         return commands.isBackwardCommand(command);
+    }
+
+    private void assignPosition(Position position) {
+        this.position = position;
     }
 
     @Override

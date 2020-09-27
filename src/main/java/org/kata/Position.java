@@ -3,28 +3,28 @@ package org.kata;
 import java.util.Objects;
 
 public class Position {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public void increaseY() {
-        this.y++;
+    public Position increaseY() {
+        return new Position(x, y + 1);
     }
 
-    public void decreaseY() {
-        this.y--;
+    public Position decreaseY() {
+        return new Position(x, y - 1);
     }
 
-    public void increaseX() {
-        this.x++;
+    public Position increaseX() {
+        return new Position(x + 1, y);
     }
 
-    public void decreaseX() {
-        this.x--;
+    public Position decreaseX() {
+        return new Position(x - 1, y);
     }
 
     @Override
