@@ -14,6 +14,22 @@ public class Rover {
         EAST,
         WEST;
 
+        public static Direction facingNorth() {
+            return NORTH;
+        }
+
+        public static Direction facingSouth() {
+            return SOUTH;
+        }
+
+        public static Direction facingEast() {
+            return EAST;
+        }
+
+        public static Direction facingWest() {
+            return WEST;
+
+        }
     }
 
     private Position position;
@@ -74,7 +90,7 @@ public class Rover {
 
     private void checkForObstaclesAt(Position position) {
         if (obstacles.at(position)) {
-           throw new UnableToMoveException("Obstacle encountered at: " + position);
+            throw new UnableToMoveException("Obstacle encountered at: " + position);
         }
     }
 
