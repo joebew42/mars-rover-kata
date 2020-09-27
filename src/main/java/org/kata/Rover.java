@@ -26,7 +26,7 @@ public class Rover {
     }
 
     public Rover(Position position, Direction direction, Obstacles obstacles) {
-        assignPosition(position);
+        this.position = position;
         this.direction = direction;
         this.obstacles = obstacles;
     }
@@ -68,7 +68,14 @@ public class Rover {
     }
 
     private void assignPosition(Position position) {
+        checkForObstaclesAt(position);
         this.position = position;
+    }
+
+    private void checkForObstaclesAt(Position position) {
+        if (obstacles.at(position)) {
+           throw new UnableToMoveException("Obstacle encountered at: " + position);
+        }
     }
 
     @Override
