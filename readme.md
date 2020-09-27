@@ -27,6 +27,9 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [F] A rover can rotate left with it received the command `l`.
+
+- [F] A rover can rotate left with it received the command `r`.
 
 - [F] Being able to interpret a sequence of commands
 
@@ -37,12 +40,6 @@ Develop an API that translates the commands sent from earth to instructions that
     - Is there a chance to extract a DSL to assert that the rover just moved along a direction?
     - Try to use `AssertThat` with custom matchers
     - Try to use `AssertJ`
-
-- [F] The method `execute` should receive an array of commands and execute them all
-
-- [F] A rover can rotate left with it received the command `l`.
-
-- [F] A rover can rotate left with it received the command `r`.
 
 ## Questions
 
