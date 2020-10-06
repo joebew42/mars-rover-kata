@@ -28,7 +28,6 @@ public class Rover {
 
         public static Direction facingWest() {
             return WEST;
-
         }
     }
 
