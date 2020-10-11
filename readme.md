@@ -31,6 +31,8 @@ Develop an API that translates the commands sent from earth to instructions that
 
 - [F] A rover can rotate left with it received the command `r`.
 
+- [R] Should the commands have to return the "new movement", or they have to call the specific movement method (`move` or `rotate`) on the `Rover`?
+
 - [F] Being able to interpret a sequence of commands
 
 - [F] If a given command encounters an obstacle, the rover moves up to the last possible position, aborts the sequence and reports the obstacle.
