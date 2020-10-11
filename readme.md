@@ -27,8 +27,6 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Remove the duplication between Commands and Direction. Message Obsession code smell
-
 - [F] A rover can rotate left with it received the command `l`.
 
 - [F] A rover can rotate left with it received the command `r`.

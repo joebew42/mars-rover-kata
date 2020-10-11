@@ -2,8 +2,6 @@ package org.kata;
 
 import java.util.Objects;
 
-import static org.kata.Rover.Direction.*;
-
 public class Rover {
 
     private final Commands commands = new Commands();
@@ -29,10 +27,10 @@ public class Rover {
         public static Direction facingWest() {
             return WEST;
         }
+
     }
 
     private Position position;
-
     private final Direction direction;
     private final Obstacles obstacles;
 
@@ -56,20 +54,8 @@ public class Rover {
         position = newPosition;
     }
 
-    public boolean isFacingNorth() {
-        return NORTH.equals(direction);
-    }
-
-    public boolean isFacingSouth() {
-        return SOUTH.equals(direction);
-    }
-
-    public boolean isFacingEast() {
-        return EAST.equals(direction);
-    }
-
-    public boolean isFacingWest() {
-        return WEST.equals(direction);
+    public Direction facingDirection() {
+        return direction;
     }
 
     private void checkForObstaclesAt(Position position) {
