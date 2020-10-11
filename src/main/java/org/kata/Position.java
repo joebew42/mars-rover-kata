@@ -3,32 +3,25 @@ package org.kata;
 import java.util.Objects;
 
 public class Position {
-    private final int x;
-    private final int y;
+    public static final Position UP = new Position(0, 1);
+    public static final Position DOWN = new Position(0, -1);
+    public static final Position RIGHT = new Position(1, 0);
+    public static final Position LEFT = new Position(-1, 0);
 
     public static Position at(int x, int y) {
         return new Position(x, y);
     }
 
-    public Position(int x, int y) {
+    private final int x;
+    private final int y;
+
+    private Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public Position increaseY() {
-        return new Position(x, y + 1);
-    }
-
-    public Position decreaseY() {
-        return new Position(x, y - 1);
-    }
-
-    public Position increaseX() {
-        return new Position(x + 1, y);
-    }
-
-    public Position decreaseX() {
-        return new Position(x - 1, y);
+    public Position move(Position position) {
+        return new Position(x + position.x, y + position.y);
     }
 
     @Override

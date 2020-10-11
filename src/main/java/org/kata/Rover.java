@@ -50,20 +50,10 @@ public class Rover {
         commands.from(commandCharacter).apply(this);
     }
 
-    public void moveWest() {
-        assignPosition(position.decreaseX());
-    }
-
-    public void moveEast() {
-        assignPosition(position.increaseX());
-    }
-
-    public void moveSouth() {
-        assignPosition(position.decreaseY());
-    }
-
-    public void moveNorth() {
-        assignPosition(position.increaseY());
+    public void move(Position to) {
+        Position newPosition = position.move(to);
+        checkForObstaclesAt(newPosition);
+        position = newPosition;
     }
 
     public boolean isFacingNorth() {
@@ -80,11 +70,6 @@ public class Rover {
 
     public boolean isFacingWest() {
         return WEST.equals(direction);
-    }
-
-    private void assignPosition(Position position) {
-        checkForObstaclesAt(position);
-        this.position = position;
     }
 
     private void checkForObstaclesAt(Position position) {
