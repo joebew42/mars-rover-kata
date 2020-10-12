@@ -3,6 +3,7 @@ package org.kata;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.kata.Rover.Direction;
 
 import static org.junit.Assert.assertEquals;
 import static org.kata.Position.at;
@@ -103,38 +104,42 @@ public class RoverTest {
 
     @Test
     public void rotate_to_west_when_it_receives_the_command_l_and_facing_north() {
-        Rover rover = new Rover(at(0, 0), facingNorth());
+        Rover rover = roverThatIs(facingNorth());
 
         rover.execute('l');
 
-        assertEquals(new Rover(at(0,0), facingWest()), rover);
+        assertEquals(roverThatIs(facingWest()), rover);
     }
 
     @Test
     public void rotate_to_south_when_it_receives_the_command_l_and_facing_west() {
-        Rover rover = new Rover(at(0, 0), facingWest());
+        Rover rover = roverThatIs(facingWest());
 
         rover.execute('l');
 
-        assertEquals(new Rover(at(0,0), facingSouth()), rover);
+        assertEquals(roverThatIs(facingSouth()), rover);
     }
 
     @Test
     public void rotate_to_east_when_it_receives_the_command_l_and_facing_south() {
-        Rover rover = new Rover(at(0, 0), facingSouth());
+        Rover rover = roverThatIs(facingSouth());
 
         rover.execute('l');
 
-        assertEquals(new Rover(at(0,0), facingEast()), rover);
+        assertEquals(roverThatIs(facingEast()), rover);
     }
 
     @Test
     public void rotate_to_north_when_it_receives_the_command_l_and_facing_east() {
-        Rover rover = new Rover(at(0, 0), facingEast());
+        Rover rover = roverThatIs(facingEast());
 
         rover.execute('l');
 
-        assertEquals(new Rover(at(0,0), facingNorth()), rover);
+        assertEquals(roverThatIs(facingNorth()), rover);
+    }
+
+    private Rover roverThatIs(Direction facingDirection) {
+        return new Rover(at(0, 0), facingDirection);
     }
 
     private Obstacles withAnObstacleAt(int x, int y) {
