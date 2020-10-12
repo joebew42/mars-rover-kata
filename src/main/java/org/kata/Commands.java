@@ -1,16 +1,15 @@
 package org.kata;
 
 public class Commands {
-    private final BackwardCommand backwardCommand = new BackwardCommand();
     private final ForwardCommand forwardCommand = new ForwardCommand();
+    private final BackwardCommand backwardCommand = new BackwardCommand();
 
     Command from(char commandCharacter) {
-        if (isBackwardCommand(commandCharacter)) {
-            return backwardCommand;
-        }
-
         if (isForwardCommand(commandCharacter)) {
             return forwardCommand;
+        }
+        if (isBackwardCommand(commandCharacter)) {
+            return backwardCommand;
         }
         return null;
     }
