@@ -67,6 +67,9 @@ public class Rover {
             case SOUTH:
                 direction = EAST;
                 break;
+            case EAST:
+                direction = NORTH;
+                break;
         }
     }
 
