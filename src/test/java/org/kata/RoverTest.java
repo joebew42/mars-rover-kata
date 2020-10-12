@@ -119,6 +119,15 @@ public class RoverTest {
         assertEquals(new Rover(at(0,0), facingSouth()), rover);
     }
 
+    @Test
+    public void rotate_to_east_when_it_receives_the_command_l_and_facing_south() {
+        Rover rover = new Rover(at(0, 0), facingSouth());
+
+        rover.execute('l');
+
+        assertEquals(new Rover(at(0,0), facingEast()), rover);
+    }
+
     private Obstacles withAnObstacleAt(int x, int y) {
         Obstacles obstacles = new Obstacles();
         obstacles.add(at(x, y));
