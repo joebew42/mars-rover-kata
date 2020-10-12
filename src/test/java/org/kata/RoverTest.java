@@ -102,7 +102,7 @@ public class RoverTest {
     }
 
     @Test
-    public void rotate_left_when_it_receives_the_command_l() {
+    public void rotate_to_west_when_it_receives_the_command_l_and_facing_north() {
         Rover rover = new Rover(at(0, 0), facingNorth());
 
         rover.execute('l');
