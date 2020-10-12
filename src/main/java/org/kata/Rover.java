@@ -59,16 +59,16 @@ public class Rover {
     private void rotateLeft() {
         switch (direction) {
             case NORTH:
-                direction = WEST;
+                direction = facingWest();
                 break;
             case WEST:
-                direction = SOUTH;
+                direction = facingSouth();
                 break;
             case SOUTH:
-                direction = EAST;
+                direction = facingEast();
                 break;
             case EAST:
-                direction = NORTH;
+                direction = facingNorth();
                 break;
         }
     }
