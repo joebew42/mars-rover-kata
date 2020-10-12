@@ -29,6 +29,9 @@ Develop an API that translates the commands sent from earth to instructions that
 
 - [F] A rover can rotate left when it receives the command `l`.
 
+- [R] Replace `Commands` with a list of commands, and consider to add the `#canApply` to the `Command` interface,
+      So that we can remove the conditional `if(isBackwardCommand ...)`
+
 - [F] A rover can rotate left when it receives the command `r`.
 
 - [R] Should the commands have to return the "new movement", or they have to call the specific movement method (`move` or `rotate`) on the `Rover`?

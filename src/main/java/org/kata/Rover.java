@@ -59,16 +59,10 @@ public class Rover {
     }
 
     public void execute(char commandCharacter) {
-        if (commandCharacter == 'l') {
-            rotateLeft();
-        }
-
-        if (commandCharacter != 'l') {
-            commands.from(commandCharacter).apply(this);
-        }
+        commands.from(commandCharacter).apply(this);
     }
 
-    private void rotateLeft() {
+    public void rotateLeft() {
         direction = facingDirection().rotateLeft();
     }
 
