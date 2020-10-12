@@ -2,6 +2,7 @@ package org.kata;
 
 import java.util.Objects;
 
+import static org.kata.Rover.Direction.SOUTH;
 import static org.kata.Rover.Direction.WEST;
 
 public class Rover {
@@ -57,7 +58,14 @@ public class Rover {
     }
 
     private void rotateLeft() {
-        direction = WEST;
+        switch (direction) {
+            case NORTH:
+                direction = WEST;
+                break;
+            case WEST:
+                direction = SOUTH;
+                break;
+        }
     }
 
     public void move(Position to) {
