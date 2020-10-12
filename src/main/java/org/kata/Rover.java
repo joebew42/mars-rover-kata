@@ -2,8 +2,6 @@ package org.kata;
 
 import java.util.Objects;
 
-import static org.kata.Rover.Direction.*;
-
 public class Rover {
 
     private final Commands commands = new Commands();
@@ -30,10 +28,24 @@ public class Rover {
             return WEST;
         }
 
+        private Direction rotateLeft() {
+            switch (this) {
+                case NORTH:
+                    return facingWest();
+                case WEST:
+                    return facingSouth();
+                case SOUTH:
+                    return facingEast();
+                case EAST:
+                default:
+                    return facingNorth();
+            }
+        }
     }
 
     private Position position;
     private Direction direction;
+
     private final Obstacles obstacles;
 
     public Rover(Position position, Direction direction) {
@@ -57,20 +69,7 @@ public class Rover {
     }
 
     private void rotateLeft() {
-        switch (direction) {
-            case NORTH:
-                direction = facingWest();
-                break;
-            case WEST:
-                direction = facingSouth();
-                break;
-            case SOUTH:
-                direction = facingEast();
-                break;
-            case EAST:
-                direction = facingNorth();
-                break;
-        }
+        direction = facingDirection().rotateLeft();
     }
 
     public void move(Position step) {
