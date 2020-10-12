@@ -27,9 +27,9 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [F] A rover can rotate left with it received the command `l`.
+- [F] A rover can rotate left when it receives the command `l`.
 
-- [F] A rover can rotate left with it received the command `r`.
+- [F] A rover can rotate left when it receives the command `r`.
 
 - [R] Should the commands have to return the "new movement", or they have to call the specific movement method (`move` or `rotate`) on the `Rover`?
 

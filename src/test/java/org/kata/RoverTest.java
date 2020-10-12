@@ -101,6 +101,15 @@ public class RoverTest {
         rover.execute('f');
     }
 
+    @Test
+    public void rotate_left_when_it_receives_the_command_l() {
+        Rover rover = new Rover(at(0, 0), facingNorth());
+
+        rover.execute('l');
+
+        assertEquals(new Rover(at(0,0), facingWest()), rover);
+    }
+
     private Obstacles withAnObstacleAt(int x, int y) {
         Obstacles obstacles = new Obstacles();
         obstacles.add(at(x, y));
