@@ -20,7 +20,7 @@ public class Position {
         this.y = y;
     }
 
-    public Position move(Position position) {
+    public Position add(Position position) {
         return new Position(x + position.x, y + position.y);
     }
 

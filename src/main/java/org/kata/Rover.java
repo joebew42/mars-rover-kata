@@ -73,8 +73,8 @@ public class Rover {
         }
     }
 
-    public void move(Position to) {
-        Position newPosition = position.move(to);
+    public void move(Position step) {
+        Position newPosition = position.add(step);
         checkForObstaclesAt(newPosition);
         position = newPosition;
     }
