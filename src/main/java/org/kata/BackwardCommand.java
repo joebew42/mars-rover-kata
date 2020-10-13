@@ -4,6 +4,11 @@ import static org.kata.Position.*;
 
 public class BackwardCommand implements Command {
     @Override
+    public Boolean canApply(Character commandAsCharacter) {
+        return 'b' == commandAsCharacter;
+    }
+
+    @Override
     public void apply(Rover rover) {
         switch (rover.facingDirection()) {
             case NORTH:

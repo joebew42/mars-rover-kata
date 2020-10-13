@@ -3,14 +3,12 @@ package org.kata;
 import java.util.Objects;
 
 public class Rover {
-
-    private final Commands commands = new Commands();
-
     public enum Direction {
         NORTH,
         SOUTH,
         EAST,
         WEST;
+
 
         public static Direction facingNorth() {
             return NORTH;
@@ -41,11 +39,13 @@ public class Rover {
                     return facingNorth();
             }
         }
+
     }
 
     private Position position;
     private Direction direction;
 
+    private final Commands commands = new Commands();
     private final Obstacles obstacles;
 
     public Rover(Position position, Direction direction) {

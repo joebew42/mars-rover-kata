@@ -1,32 +1,21 @@
 package org.kata;
 
+import java.util.List;
+
+import static java.util.Arrays.asList;
+
 public class Commands {
-    private final ForwardCommand forwardCommand = new ForwardCommand();
-    private final BackwardCommand backwardCommand = new BackwardCommand();
-    private final RotateLeftCommand rotateLeftCommand = new RotateLeftCommand();
+    private final List<Command> commands = asList(
+            new ForwardCommand(),
+            new BackwardCommand(),
+            new RotateLeftCommand()
+    );
 
     Command from(char commandCharacter) {
-        if (isForwardCommand(commandCharacter)) {
-            return forwardCommand;
-        }
-        if (isBackwardCommand(commandCharacter)) {
-            return backwardCommand;
-        }
-        if (isRotateLeftCommand(commandCharacter)) {
-            return rotateLeftCommand;
-        }
-        return null;
+        return commands.stream()
+                .filter(command -> command.canApply(commandCharacter))
+                .findFirst()
+                .orElseGet(null);
     }
 
-    private boolean isForwardCommand(char command) {
-        return 'f' == command;
-    }
-
-    private boolean isBackwardCommand(char command) {
-        return 'b' == command;
-    }
-
-    private boolean isRotateLeftCommand(char command) {
-        return 'l' == command;
-    }
 }
