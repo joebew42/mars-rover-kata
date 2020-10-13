@@ -27,8 +27,6 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Inject `Commands` as a collaborator of the `Rover`
-
 - [F] A rover can rotate right when it receives the command `r`.
 
 - [R] Should the commands have to return the "new movement", or they have to call the specific movement method (`move` or `rotate`) on the `Rover`?

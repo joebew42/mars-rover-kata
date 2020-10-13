@@ -39,23 +39,27 @@ public class Rover {
                     return facingNorth();
             }
         }
-
     }
+
+    private final Commands commands;
+    private final Obstacles obstacles;
 
     private Position position;
     private Direction direction;
-
-    private final Commands commands = new Commands();
-    private final Obstacles obstacles;
 
     public Rover(Position position, Direction direction) {
         this(position, direction, new Obstacles());
     }
 
     public Rover(Position position, Direction direction, Obstacles obstacles) {
+        this(position, direction, obstacles, new Commands());
+    }
+
+    public Rover(Position position, Direction direction, Obstacles obstacles, Commands commands) {
         this.position = position;
         this.direction = direction;
         this.obstacles = obstacles;
+        this.commands = commands;
     }
 
     public void execute(char commandCharacter) {
