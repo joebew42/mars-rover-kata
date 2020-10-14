@@ -3,43 +3,6 @@ package org.kata;
 import java.util.Objects;
 
 public class Rover {
-    public enum Direction {
-        NORTH,
-        SOUTH,
-        EAST,
-        WEST;
-
-        public static Direction facingNorth() {
-            return NORTH;
-        }
-
-        public static Direction facingSouth() {
-            return SOUTH;
-        }
-
-        public static Direction facingEast() {
-            return EAST;
-        }
-
-        public static Direction facingWest() {
-            return WEST;
-        }
-
-        private Direction rotateLeft() {
-            switch (this) {
-                case NORTH:
-                    return facingWest();
-                case WEST:
-                    return facingSouth();
-                case SOUTH:
-                    return facingEast();
-                case EAST:
-                default:
-                    return facingNorth();
-            }
-        }
-    }
-
     private final Commands commands;
     private final Obstacles obstacles;
 

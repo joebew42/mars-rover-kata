@@ -3,11 +3,10 @@ package org.kata;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.kata.Rover.Direction;
 
 import static org.junit.Assert.assertEquals;
 import static org.kata.Position.at;
-import static org.kata.Rover.Direction.*;
+import static org.kata.Direction.*;
 
 public class RoverTest {
     @Rule
