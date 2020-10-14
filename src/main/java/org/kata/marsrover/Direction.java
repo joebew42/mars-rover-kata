@@ -1,4 +1,4 @@
-package org.kata;
+package org.kata.marsrover;
 
 public enum Direction {
     NORTH,

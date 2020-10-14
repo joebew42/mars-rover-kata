@@ -1,6 +1,4 @@
-package org.kata;
-
-import static org.kata.Position.*;
+package org.kata.marsrover;
 
 public class BackwardCommand implements Command {
     @Override
@@ -12,16 +10,16 @@ public class BackwardCommand implements Command {
     public void apply(Rover rover) {
         switch (rover.facingDirection()) {
             case NORTH:
-                rover.move(DOWN);
+                rover.move(Position.DOWN);
                 break;
             case SOUTH:
-                rover.move(UP);
+                rover.move(Position.UP);
                 break;
             case EAST:
-                rover.move(LEFT);
+                rover.move(Position.LEFT);
                 break;
             case WEST:
-                rover.move(RIGHT);
+                rover.move(Position.RIGHT);
                 break;
         }
     }

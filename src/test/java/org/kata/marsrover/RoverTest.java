@@ -1,12 +1,12 @@
-package org.kata;
+package org.kata.marsrover;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
-import static org.kata.Position.at;
-import static org.kata.Direction.*;
+import static org.kata.marsrover.Position.at;
+import static org.kata.marsrover.Direction.*;
 
 public class RoverTest {
     @Rule

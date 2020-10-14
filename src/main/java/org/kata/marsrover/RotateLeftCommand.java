@@ -1,4 +1,4 @@
-package org.kata;
+package org.kata.marsrover;
 
 public class RotateLeftCommand implements Command {
     @Override

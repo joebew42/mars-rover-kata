@@ -1,4 +1,4 @@
-package org.kata;
+package org.kata.marsrover;
 
 import java.util.HashSet;
 import java.util.Set;
