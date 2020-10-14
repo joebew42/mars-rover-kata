@@ -9,7 +9,6 @@ public class Rover {
         EAST,
         WEST;
 
-
         public static Direction facingNorth() {
             return NORTH;
         }
@@ -64,6 +63,12 @@ public class Rover {
 
     public void execute(char commandCharacter) {
         commands.from(commandCharacter).apply(this);
+    }
+
+    public void execute(char[] arrayOfCommands) {
+        for (char command : arrayOfCommands) {
+            execute(command);
+        }
     }
 
     public void rotateLeft() {

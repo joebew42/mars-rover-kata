@@ -138,6 +138,15 @@ public class RoverTest {
         assertEquals(roverThatIs(facingNorth()), rover);
     }
 
+    @Test
+    public void receives_and_run_an_array_of_commands() {
+        Rover rover = new Rover(at(0, 0), facingNorth());
+
+        rover.execute(new char[]{'f', 'l', 'f', 'l', 'b'});
+
+        assertEquals(new Rover(at(-1, 2), facingSouth()), rover);
+    }
+
     private Rover roverThatIs(Direction facingDirection) {
         return new Rover(at(0, 0), facingDirection);
     }
