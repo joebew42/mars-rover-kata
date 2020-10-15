@@ -21,14 +21,14 @@ public class Rover {
         this.commands = commands;
     }
 
-    public void execute(char commandCharacter) {
-        findCommandBy(commandCharacter).apply(this);
-    }
-
     public void execute(char[] arrayOfCommands) {
         for (char command : arrayOfCommands) {
             execute(command);
         }
+    }
+
+    public void execute(char commandCharacter) {
+        findCommandBy(commandCharacter).apply(this);
     }
 
     public void rotateLeft() {
