@@ -11,7 +11,7 @@ public class Commands {
             new RotateLeftCommand()
     );
 
-    Command from(char commandCharacter) {
+    Command findBy(char commandCharacter) {
         return commands.stream()
                 .filter(command -> command.canApply(commandCharacter))
                 .findFirst()

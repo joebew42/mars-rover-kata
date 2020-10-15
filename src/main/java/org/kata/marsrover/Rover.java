@@ -31,7 +31,7 @@ public class Rover {
     }
 
     public void execute(char commandCharacter) {
-        commands.from(commandCharacter).apply(this);
+        commands.findBy(commandCharacter).apply(this);
     }
 
     public void rotateLeft() {
