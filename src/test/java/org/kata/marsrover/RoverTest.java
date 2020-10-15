@@ -96,7 +96,7 @@ public class RoverTest {
         expectedException.expect(UnableToMoveException.class);
         expectedException.expectMessage("Obstacle encountered at: Position{x=0, y=1}");
 
-        Rover rover = new Rover(at(0, 0), facingNorth(), withAnObstacleAt(0, 1));
+        Rover rover = new Rover(at(0, 0), facingNorth(), withAnObstacleAt(0, 1), DefaultCommands.all);
 
         rover.execute('f');
     }
@@ -145,6 +145,8 @@ public class RoverTest {
 
         assertEquals(new Rover(at(-1, 2), facingSouth()), rover);
     }
+
+
 
     private Rover roverThatIs(Direction facingDirection) {
         return new Rover(at(0, 0), facingDirection);
