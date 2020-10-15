@@ -1,34 +1,37 @@
 package org.kata.marsrover;
 
-import java.util.List;
 import java.util.Objects;
 
 public class Rover {
+    private final Commands commands;
     private final Obstacles obstacles;
-    private final List<Command> commands;
 
     private Position position;
     private Direction direction;
 
     public Rover(Position position, Direction direction) {
-        this(position, direction, new Obstacles(), DefaultCommands.all);
+        this(position, direction, new Obstacles());
     }
 
-    public Rover(Position position, Direction direction, Obstacles obstacles, List<Command> commands) {
+    public Rover(Position position, Direction direction, Obstacles obstacles) {
+        this(position, direction, obstacles, new Commands());
+    }
+
+    public Rover(Position position, Direction direction, Obstacles obstacles, Commands commands) {
         this.position = position;
         this.direction = direction;
         this.obstacles = obstacles;
         this.commands = commands;
     }
 
+    public void execute(char commandCharacter) {
+        commands.from(commandCharacter).apply(this);
+    }
+
     public void execute(char[] arrayOfCommands) {
         for (char command : arrayOfCommands) {
             execute(command);
         }
-    }
-
-    public void execute(char commandCharacter) {
-        findCommandBy(commandCharacter).apply(this);
     }
 
     public void rotateLeft() {
@@ -43,13 +46,6 @@ public class Rover {
 
     public Direction facingDirection() {
         return direction;
-    }
-
-    private Command findCommandBy(char commandCharacter) {
-        return commands.stream()
-                .filter(command -> command.canApply(commandCharacter))
-                .findFirst()
-                .orElseGet(null);
     }
 
     private void checkForObstaclesAt(Position position) {

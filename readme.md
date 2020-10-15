@@ -27,8 +27,11 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+<<<<<<< HEAD
 - [R] The method `Rover#execute` should not be public anymore, since the rover expect to receive an array of commands.
 
+=======
+>>>>>>> parent of 90e5505... Inject the list of Command to the rover and remove the Commands class
 - [F] If a given command encounters an obstacle, the rover moves up to the last possible position, aborts the sequence and reports the obstacle.
 
 - [F] A rover can rotate right when it receives the command `r`.
@@ -40,6 +43,8 @@ Develop an API that translates the commands sent from earth to instructions that
     - Is there a chance to extract a DSL to assert that the rover just moved along a direction?
     - Try to use `AssertThat` with custom matchers
     - Try to use `AssertJ`
+
+- [R] Do we still need a class for `Commands` or we can inline that class as a detail of the `Rover`? So that we can build the Rover with a list of commands.
 
 - [E] What happens when we supply a not recognized command? Something different than `f`, `b`, `l`, or `r`.
 
