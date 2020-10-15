@@ -27,16 +27,11 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-<<<<<<< HEAD
 - [R] The method `Rover#execute` should not be public anymore, since the rover expect to receive an array of commands.
 
-=======
->>>>>>> parent of 90e5505... Inject the list of Command to the rover and remove the Commands class
 - [F] If a given command encounters an obstacle, the rover moves up to the last possible position, aborts the sequence and reports the obstacle.
 
 - [F] A rover can rotate right when it receives the command `r`.
-
-- [R] Should the commands have to return the "new movement", or they have to call the specific movement method (`move` or `rotate`) on the `Rover`?
 
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
 
