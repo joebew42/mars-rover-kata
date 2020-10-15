@@ -27,7 +27,7 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] Do we still need a class for `Commands` or we can inline that class as a detail of the `Rover`? So that we can build the Rover with a list of commands.
+- [R] The method `Rover#execute` should not be public anymore, since the rover expect to receive an array of commands.
 
 - [F] If a given command encounters an obstacle, the rover moves up to the last possible position, aborts the sequence and reports the obstacle.
 
