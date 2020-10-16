@@ -27,7 +27,11 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [R] The method `Rover#execute` should not be public anymore, since the rover expect to receive an array of commands.
+- [R] `Rover#move` receives a `Position` that might cause the rover to move by more than one step at time.
+       For example: from position (0,0) to (3,5) if we do currentPosition.add(3,5).
+       Is that something we can live with or we might find a way to limit the position to move at most by 1 unit at a time?
+
+- [R] `Rover#execute` should not be public anymore, since the rover expect to receive an array of commands.
 
 - [F] If a given command encounters an obstacle, the rover moves up to the last possible position, aborts the sequence and reports the obstacle.
 
