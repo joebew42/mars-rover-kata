@@ -27,6 +27,10 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [F] Implement wrapping at edges: Connect the x edge to the other x edge, so (1,1) for x-1 to (5,1)
+
+- [F] Implement wrapping at edges: Connect vertical edges towards themselves in inverted coordinates, so (1,1) for y-1 connects to (5,1).
+
 - [R] Are `Rover#rotateLeft` and `Rover#rotateRight` a symptom of the Message Obsession code smell?
       Is there a way to express the rotation as `Rover#rotate(Right|Left)`?
 
