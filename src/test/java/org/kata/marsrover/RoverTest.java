@@ -138,6 +138,42 @@ public class RoverTest {
     }
 
     @Test
+    public void rotate_to_east_when_it_receives_the_command_r_and_facing_north() {
+        Rover rover = roverThatIs(facingNorth());
+
+        rover.execute(new char[]{'r'});
+
+        assertEquals(roverThatIs(facingEast()), rover);
+    }
+
+    @Test
+    public void rotate_to_south_when_it_receives_the_command_r_and_facing_east() {
+        Rover rover = roverThatIs(facingEast());
+
+        rover.execute(new char[]{'r'});
+
+        assertEquals(roverThatIs(facingSouth()), rover);
+    }
+
+    @Test
+    public void rotate_to_west_when_it_receives_the_command_r_and_facing_south() {
+        Rover rover = roverThatIs(facingSouth());
+
+        rover.execute(new char[]{'r'});
+
+        assertEquals(roverThatIs(facingWest()), rover);
+    }
+
+    @Test
+    public void rotate_to_north_when_it_receives_the_command_r_and_facing_west() {
+        Rover rover = roverThatIs(facingWest());
+
+        rover.execute(new char[]{'r'});
+
+        assertEquals(roverThatIs(facingNorth()), rover);
+    }
+
+    @Test
     public void receives_and_run_an_array_of_commands() {
         Rover rover = new Rover(at(0, 0), facingNorth());
 

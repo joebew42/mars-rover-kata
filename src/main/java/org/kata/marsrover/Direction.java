@@ -35,4 +35,18 @@ public enum Direction {
                 return facingNorth();
         }
     }
+
+    public Direction rotateRight() {
+        switch (this) {
+            case NORTH:
+                return facingEast();
+            case EAST:
+                return facingSouth();
+            case SOUTH:
+                return facingWest();
+            case WEST:
+            default:
+                return facingNorth();
+        }
+    }
 }

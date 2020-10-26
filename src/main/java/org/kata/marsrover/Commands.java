@@ -8,7 +8,8 @@ public class Commands {
     private final List<Command> commands = asList(
             new ForwardCommand(),
             new BackwardCommand(),
-            new RotateLeftCommand()
+            new RotateLeftCommand(),
+            new RotateRightCommand()
     );
 
     Command findBy(char commandCharacter) {

@@ -38,6 +38,10 @@ public class Rover {
         direction = facingDirection().rotateLeft();
     }
 
+    public void rotateRight() {
+        direction = facingDirection().rotateRight();
+    }
+
     public void move(Position step) {
         Position newPosition = position.add(step);
         checkForObstaclesAt(newPosition);
