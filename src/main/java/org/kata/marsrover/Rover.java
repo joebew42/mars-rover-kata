@@ -30,7 +30,7 @@ public class Rover {
         }
     }
 
-    public void execute(char commandCharacter) {
+    private void execute(char commandCharacter) {
         commands.findBy(commandCharacter).apply(this);
     }
 

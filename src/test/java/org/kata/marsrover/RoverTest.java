@@ -23,7 +23,7 @@ public class RoverTest {
     public void moves_north_when_it_receives_the_command_f_and_it_is_facing_north() {
         Rover rover = new Rover(at(0, 0), facingNorth());
 
-        rover.execute('f');
+        rover.execute(new char[]{'f'});
 
         assertEquals(new Rover(at(0, 1), facingNorth()), rover);
     }
@@ -32,7 +32,7 @@ public class RoverTest {
     public void moves_south_when_it_receives_the_command_f_and_it_is_facing_south() {
         Rover rover = new Rover(at(0, 0), facingSouth());
 
-        rover.execute('f');
+        rover.execute(new char[]{'f'});
 
         assertEquals(new Rover(at(0, -1), facingSouth()), rover);
     }
@@ -41,7 +41,7 @@ public class RoverTest {
     public void moves_east_when_it_receives_the_command_f_and_it_is_facing_east() {
         Rover rover = new Rover(at(0, 0), facingEast());
 
-        rover.execute('f');
+        rover.execute(new char[]{'f'});
 
         assertEquals(new Rover(at(1, 0), facingEast()), rover);
     }
@@ -50,7 +50,7 @@ public class RoverTest {
     public void moves_west_when_it_receives_the_command_f_and_it_is_facing_west() {
         Rover rover = new Rover(at(0, 0), facingWest());
 
-        rover.execute('f');
+        rover.execute(new char[]{'f'});
 
         assertEquals(new Rover(at(-1, 0), facingWest()), rover);
     }
@@ -59,7 +59,7 @@ public class RoverTest {
     public void moves_south_when_it_receives_the_command_b_and_it_is_facing_north() {
         Rover rover = new Rover(at(0, 0), facingNorth());
 
-        rover.execute('b');
+        rover.execute(new char[]{'b'});
 
         assertEquals(new Rover(at(0, -1), facingNorth()), rover);
     }
@@ -68,7 +68,7 @@ public class RoverTest {
     public void moves_north_when_it_receives_the_command_b_and_it_is_facing_south() {
         Rover rover = new Rover(at(0, 0), facingSouth());
 
-        rover.execute('b');
+        rover.execute(new char[]{'b'});
 
         assertEquals(new Rover(at(0, 1), facingSouth()), rover);
     }
@@ -77,7 +77,7 @@ public class RoverTest {
     public void moves_west_when_it_receives_the_command_b_and_it_is_facing_east() {
         Rover rover = new Rover(at(0, 0), facingEast());
 
-        rover.execute('b');
+        rover.execute(new char[]{'b'});
 
         assertEquals(new Rover(at(-1, 0), facingEast()), rover);
     }
@@ -86,7 +86,7 @@ public class RoverTest {
     public void moves_east_when_it_receives_the_command_b_and_it_is_facing_west() {
         Rover rover = new Rover(at(0, 0), facingWest());
 
-        rover.execute('b');
+        rover.execute(new char[]{'b'});
 
         assertEquals(new Rover(at(1, 0), facingWest()), rover);
     }
@@ -98,14 +98,14 @@ public class RoverTest {
 
         Rover rover = new Rover(at(0, 0), facingNorth(), withAnObstacleAt(0, 1));
 
-        rover.execute('f');
+        rover.execute(new char[]{'f'});
     }
 
     @Test
     public void rotate_to_west_when_it_receives_the_command_l_and_facing_north() {
         Rover rover = roverThatIs(facingNorth());
 
-        rover.execute('l');
+        rover.execute(new char[]{'l'});
 
         assertEquals(roverThatIs(facingWest()), rover);
     }
@@ -114,7 +114,7 @@ public class RoverTest {
     public void rotate_to_south_when_it_receives_the_command_l_and_facing_west() {
         Rover rover = roverThatIs(facingWest());
 
-        rover.execute('l');
+        rover.execute(new char[]{'l'});
 
         assertEquals(roverThatIs(facingSouth()), rover);
     }
@@ -123,7 +123,7 @@ public class RoverTest {
     public void rotate_to_east_when_it_receives_the_command_l_and_facing_south() {
         Rover rover = roverThatIs(facingSouth());
 
-        rover.execute('l');
+        rover.execute(new char[]{'l'});
 
         assertEquals(roverThatIs(facingEast()), rover);
     }
@@ -132,7 +132,7 @@ public class RoverTest {
     public void rotate_to_north_when_it_receives_the_command_l_and_facing_east() {
         Rover rover = roverThatIs(facingEast());
 
-        rover.execute('l');
+        rover.execute(new char[]{'l'});
 
         assertEquals(roverThatIs(facingNorth()), rover);
     }
