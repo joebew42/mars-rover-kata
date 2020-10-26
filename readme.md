@@ -27,9 +27,12 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
+- [R] Are `Rover#rotateLeft` and `Rover#rotateRight` a symptom of the Message Obsession code smell?
+      Is there a way to express the rotation as `Rover#rotate(Right|Left)`?
+
 - [R] `Rover#move` receives a `Position` that might cause the rover to move by more than one step at time.
-       For example: from position (0,0) to (3,5) if we do currentPosition.add(3,5).
-       Is that something we can live with, or we might find a way to limit the position to move at most by 1 unit at a time?
+      For example: from position (0,0) to (3,5) if we do currentPosition.add(3,5).
+      Is that something we can live with, or we might find a way to limit the position to move at most by 1 unit at a time?
 
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
 
