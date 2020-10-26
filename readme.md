@@ -27,9 +27,11 @@ Develop an API that translates the commands sent from earth to instructions that
 
 ## TODO
 
-- [F] If a given command encounters an obstacle, the rover moves up to the last possible position, aborts the sequence and reports the obstacle.
-
 - [F] A rover can rotate right when it receives the command `r`.
+
+- [R] `Rover#move` receives a `Position` that might cause the rover to move by more than one step at time.
+       For example: from position (0,0) to (3,5) if we do currentPosition.add(3,5).
+       Is that something we can live with, or we might find a way to limit the position to move at most by 1 unit at a time?
 
 - [R] Is there a better way to express `assertEquals(new Rover(new Position(-1, 0), WEST), rover);` in the test?
 
